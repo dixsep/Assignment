@@ -4,6 +4,7 @@ import {  Router } from "express";
 
 const router = Router();
 
+//Add New Service Request
 router.post('/requests', async (req , res) => {
 
     try{
@@ -17,6 +18,7 @@ router.post('/requests', async (req , res) => {
     }
 })
 
+//Get request by ID
 router.get("/requests/:id", async (req : Request, res : Response) => {
     try{
 
@@ -30,6 +32,7 @@ router.get("/requests/:id", async (req : Request, res : Response) => {
     }
 });
 
+//Get all Requests
 router.get("/requests", async (req,res) => {
     try{
 
@@ -43,6 +46,7 @@ router.get("/requests", async (req,res) => {
     }
 });
 
+//Update Request
 router.put("/requests/:id", async (req : Request,res : Response) => {
 
      try{
@@ -64,6 +68,7 @@ router.put("/requests/:id", async (req : Request,res : Response) => {
       }
 })
 
+//Remove completed or canceled request
 router.delete("/requests/:id", async (req : Request,res : Response) => {
     try{
         const deleted = await deleteRequest(req.params.id);
@@ -86,6 +91,7 @@ router.delete("/requests/:id", async (req : Request,res : Response) => {
     }
 })
 
+//Mark request as completed
 router.post("/requests/:id/complete", async (req : Request, res : Response) => {
     try{
 
