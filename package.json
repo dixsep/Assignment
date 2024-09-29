@@ -1,0 +1,22 @@
+{
+  "name": "assignment2",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/proper-lockfile": "^4.1.4",
+    "@types/uuid": "^10.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.0",
+    "proper-lockfile": "^4.1.2",
+    "uuid": "^10.0.0"
+  },
+  "scripts": {
+  "dev": "bun --hot run index.ts"
+}
+}
