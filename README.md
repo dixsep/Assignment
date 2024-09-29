@@ -1,4 +1,4 @@
-# assignment2
+# Assignment2
 
 To install dependencies:
 
